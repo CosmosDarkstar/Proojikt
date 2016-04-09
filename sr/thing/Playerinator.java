@@ -1,13 +1,16 @@
-package audioPlayer;
+package thing;
 
 import java.io.File;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 
+import org.apache.tika.Tika;
+
 import jaco.mp3.player.MP3Player;
 
 public class Playerinator {
+	static Tika tika = new Tika();
 	static int i = 0;
 
 	public static void main(String[] args) throws Exception {
@@ -15,10 +18,13 @@ public class Playerinator {
 		MP3Player player = new MP3Player();
 
 		player.setRepeat(true);
-		File in = new File("D:\\teh musics\\Feared-Synder-MP3\\Feared\\Synder\\");
+		File in = new File("D:/");
 		File[] pile = in.listFiles();
 		for (File f : pile) {
-			player.addToPlayList(pile[i]);
+
+			if (tika.detect(f) == "mp3") {
+				player.addToPlayList(pile[i]);
+			}
 			i++;
 		}
 
@@ -27,6 +33,7 @@ public class Playerinator {
 		JFrame frame = new JFrame("MP3 Player");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(player);
+
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);

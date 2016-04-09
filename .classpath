@@ -33,5 +33,7 @@
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/tritonus-mp3enc-2001-04-25.zip"/>
 	<classpathentry kind="lib" path="tritonus_share-0.3.6.jar"/>
 	<classpathentry kind="lib" path="lame-3.99.5.tar.gz"/>
+	<classpathentry kind="lib" path="mp3spi1.9.5.zip"/>
+	<classpathentry kind="lib" path="tika-app-1.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
