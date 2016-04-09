@@ -9,10 +9,10 @@ import org.apache.tika.Tika;
 
 import jaco.mp3.player.MP3Player;
 
-public class Playerinator {
+public class Hate {
 	static Tika tika = new Tika();
 	static int i = 0;
-	static File in = new File("C:\\Users\\CosmosDarkstar\\Desktop\\moonrise");
+	static File in = new File("The L-Train (and friends) - Moonrise - 01 Scene 1- Prelude.mp3");
 
 	public static void main(String[] args) throws Exception {
 

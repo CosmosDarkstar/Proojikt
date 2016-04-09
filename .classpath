@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="sr"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/CodecJOgg.jar"/>
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/CodecJOrbis.jar"/>
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/commons-csv-1.2-bin.zip"/>
@@ -32,8 +32,6 @@
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/tritonus_mp3-0.3.6.jar"/>
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/tritonus-mp3enc-2001-04-25.zip"/>
 	<classpathentry kind="lib" path="tritonus_share-0.3.6.jar"/>
-	<classpathentry kind="lib" path="lame-3.99.5.tar.gz"/>
-	<classpathentry kind="lib" path="mp3spi1.9.5.zip"/>
 	<classpathentry kind="lib" path="tika-app-1.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
