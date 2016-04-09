@@ -80,10 +80,13 @@ public class VorpalFlop implements ActionListener {
 		JButton btnPlay = new JButton("Play");
 		btnPlay.setBounds(20, 155, 89, 23);
 		frame.getContentPane().add(btnPlay);
+		btnPlay.addActionListener(this);
 
 		JButton btnPause = new JButton("Pause");
 		btnPause.setBounds(20, 217, 89, 23);
 		frame.getContentPane().add(btnPause);
+		btnPause.addActionListener(this);
+
 	}
 
 	@Override
