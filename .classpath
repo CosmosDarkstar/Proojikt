@@ -28,5 +28,10 @@
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/SoundSystemUtils.jar"/>
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/jaco-mp3-player-0.9.3.zip"/>
 	<classpathentry kind="lib" path="jaco-mp3-player-0.9.3.jar"/>
+	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/javalayer.jar"/>
+	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/tritonus_mp3-0.3.6.jar"/>
+	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/tritonus-mp3enc-2001-04-25.zip"/>
+	<classpathentry kind="lib" path="tritonus_share-0.3.6.jar"/>
+	<classpathentry kind="lib" path="lame-3.99.5.tar.gz"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
