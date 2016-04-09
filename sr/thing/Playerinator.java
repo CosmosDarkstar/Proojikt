@@ -12,13 +12,14 @@ import jaco.mp3.player.MP3Player;
 public class Playerinator {
 	static Tika tika = new Tika();
 	static int i = 0;
+	static File in = new File("C:\\Users\\CosmosDarkstar\\Desktop\\moonrise");
 
 	public static void main(String[] args) throws Exception {
 
 		MP3Player player = new MP3Player();
 
 		player.setRepeat(true);
-		File in = new File("D:/");
+
 		File[] pile = in.listFiles();
 		for (File f : pile) {
 
