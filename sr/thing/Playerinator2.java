@@ -1,30 +1,28 @@
 package thing;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 
-import org.apache.tika.Tika;
-
 import jaco.mp3.player.MP3Player;
 
 public class Playerinator2 {
-	static Tika tika = new Tika();
 
 	public static void main(String[] args) throws Exception {
-		int i = 0;
+
 		MP3Player player = new MP3Player();
-
 		player.setRepeat(true);
-		File in = new File("D:/teh musics/The_Music_of_League_of_Legends_Volume_1/");
-		File[] pile = new File[] { in };
-		for (File f : pile) {
 
-			if (tika.detect(f) == "mp3") {
-				player.addToPlayList(pile[i]);
-			}
-			i++;
+		ArrayList<File> pill = new ArrayList<File>();
+		ArrayList<File> pil = listf("D:\\teh musics\\", pill);
+
+		for (File f : pil) {
+
+			player.addToPlayList(f);
+			System.out.println(f);
+
 		}
 
 		player.setBorder(BorderFactory.createEmptyBorder(50, 100, 50, 100));
@@ -36,6 +34,20 @@ public class Playerinator2 {
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
+	}
+
+	public static ArrayList<File> listf(String grak, ArrayList<File> files) {
+		File floobl = new File(grak);
+
+		File[] fList = floobl.listFiles();
+		for (File f : fList) {
+			if (f.isFile()) {
+				files.add(f);
+			} else if (f.isDirectory()) {
+				listf(f.getAbsolutePath(), files);
+			}
+		}
+		return files;
 	}
 
 }
