@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/SoundSystemJPCT.jar"/>
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/SoundSystemUtils.jar"/>
 	<classpathentry kind="lib" path="F:/CodingIsRage/Proojikt/jaco-mp3-player-0.9.3.zip"/>
+	<classpathentry kind="lib" path="jaco-mp3-player-0.9.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

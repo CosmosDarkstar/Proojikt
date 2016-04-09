@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
@@ -49,12 +50,12 @@ public class VorpalFlop implements ActionListener {
 	private void initialize() {
 
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 537, 509);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
 		btnClickMe = new JButton("CLICK ME");
-		btnClickMe.setBounds(168, 160, 89, 23);
+		btnClickMe.setBounds(10, 436, 89, 23);
 		frame.getContentPane().add(btnClickMe);
 		btnClickMe.addActionListener(this);
 
@@ -71,6 +72,18 @@ public class VorpalFlop implements ActionListener {
 		wea = new JTextPane();
 		wea.setBounds(10, 107, 424, 20);
 		frame.getContentPane().add(wea);
+
+		JList songList = new JList();
+		songList.setBounds(211, 220, 300, 239);
+		frame.getContentPane().add(songList);
+
+		JButton btnPlay = new JButton("Play");
+		btnPlay.setBounds(20, 155, 89, 23);
+		frame.getContentPane().add(btnPlay);
+
+		JButton btnPause = new JButton("Pause");
+		btnPause.setBounds(20, 217, 89, 23);
+		frame.getContentPane().add(btnPause);
 	}
 
 	@Override
