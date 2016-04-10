@@ -1,14 +1,17 @@
 package thing;
 
+import java.awt.BorderLayout;
 import java.io.File;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 import jaco.mp3.player.MP3Player;
 
-public class Playerinator2 {
+public class Playerinator {
 
 	public static void main(String[] args) throws Exception {
 
@@ -25,10 +28,20 @@ public class Playerinator2 {
 
 		}
 
-		player.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50));
 		JFrame frame = new JFrame("MP3 Player");
+		BorderLayout lay = new BorderLayout();
+		JTextField vop = new JTextField();
+		frame.setSize(900, 200);
+		player.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
+
+		lay.setHgap(10);
+		lay.setVgap(5);
+		frame.setLayout(lay);
+
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().add(player);
+		frame.add(player, BorderLayout.NORTH);
+		frame.add(new JLabel("Enter directory here"), BorderLayout.CENTER);
+		frame.add(vop, BorderLayout.SOUTH);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
