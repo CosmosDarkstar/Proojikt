@@ -70,17 +70,6 @@ public class Playerinator implements ActionListener {
 
 	}
 
-	private static void initialGUI() {
-		// frame.setSize(900, 200);
-		player.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
-
-		lay.setHgap(10);
-		lay.setVgap(5);
-		frame.setLayout(lay);
-
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
 	private static void inputGUI() {
 		player.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
 
@@ -110,6 +99,7 @@ public class Playerinator implements ActionListener {
 	}
 
 	private void stepGUI() {
+		// TODO make button de activate the second actionPerformed method
 		frame.remove(as);
 		frame.remove(vop);
 		frame.remove(der);
