@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
 
+import javax.swing.AbstractAction;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,8 +15,9 @@ import javax.swing.JTextField;
 
 import jaco.mp3.player.MP3Player;
 
-public class Playerinator implements ActionListener {
-	private static ActionListener a = new Playerinator();
+public class Playerinator3 implements ActionListener {
+	private static ActionListener a = new Playerinator3();
+	// private static ActionListener b = new Playerinator();
 
 	private static MP3Player player = new MP3Player();
 
@@ -30,6 +32,8 @@ public class Playerinator implements ActionListener {
 	private static JLabel as = new JLabel("Enter directory here");
 
 	private static String dirc;
+
+	private static RunGUI fail = new RunGUI();
 
 	public static void main(String[] args) throws Exception {
 		player.setRepeat(true);
@@ -53,15 +57,15 @@ public class Playerinator implements ActionListener {
 	}
 
 	private static void playlistAdd(String dirc) {
-		if (!dirc.isEmpty()) {
-			pil = listf(dirc, pill);
-			for (File f : pil) {
+		// if (!dirc.isEmpty()) {
+		pil = listf(dirc, pill);
+		for (File f : pil) {
 
-				player.addToPlayList(f);
-				System.out.println(f);
+			player.addToPlayList(f);
+			System.out.println(f);
 
-			}
 		}
+		// }
 
 	}
 
@@ -93,13 +97,42 @@ public class Playerinator implements ActionListener {
 		frame.setVisible(true);
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		dirc = vop.getText();
-		dirc.replace("\\", "/");
-		playlistAdd(dirc);
-		playerGUI();
+	private void stepGUI() {
+		// TODO make button de display properly
+		frame.remove(as);
+		frame.remove(vop);
+		frame.remove(der);
+		frame.add(de, BorderLayout.CENTER);
+		de.setAction(fail);
+
+		frame.pack();
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
 
 	}
 
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		dirc = vop.getText();
+		playlistAdd(dirc);
+		playerGUI();
+		// stepGUI();
+
+	}
+
+}
+
+class RunGUI extends AbstractAction {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7077907998855147840L;
+
+	public RunGUI() {
+		// playerGUI();
+	}
+
+	public void actionPerformed(ActionEvent arg0) {
+		Playerinator3.playerGUI();
+	}
 }
