@@ -5,17 +5,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
 import jaco.mp3.player.MP3Player;
 
 public class Playerinator implements ActionListener {
 	private static ActionListener a = new Playerinator();
 
-	private static MP3Player player = new MP3Player(); /*WARNING THIS ISNT ON YOUR BUILDPATH*/
+	private static MP3Player player = new MP3Player();
 
 	private static ArrayList<File> pill = new ArrayList<File>();
 	private static ArrayList<File> pil;
