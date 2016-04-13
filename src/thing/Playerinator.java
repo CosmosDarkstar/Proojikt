@@ -5,13 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
 import jaco.mp3.player.MP3Player;
 
 public class Playerinator implements ActionListener {
@@ -24,7 +23,7 @@ public class Playerinator implements ActionListener {
 
 	private static JFrame frame = new JFrame("MP3 Player");
 	private static BorderLayout lay = new BorderLayout();
-	private static JTextField vop = new JTextField();
+	private static JTextField vop = new JTextField(findDir().getAbsolutePath());
 	private static JButton der = new JButton("Click when directory entered.");
 	private static JButton de = new JButton("Click here to move to player.");
 	private static JLabel as = new JLabel("Enter directory here");
@@ -100,6 +99,14 @@ public class Playerinator implements ActionListener {
 		playlistAdd(dirc);
 		playerGUI();
 
+	}
+
+	private static File findDir() {
+		JFileChooser choose = new JFileChooser();
+		choose.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		choose.showDialog(null, "Open Directory");
+
+		return choose.getSelectedFile();
 	}
 
 }
