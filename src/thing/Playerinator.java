@@ -5,12 +5,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
 import jaco.mp3.player.MP3Player;
 
 public class Playerinator implements ActionListener {
@@ -86,7 +88,7 @@ public class Playerinator implements ActionListener {
 		frame.remove(vop);
 		frame.remove(der);
 		frame.remove(de);
-		frame.add(player, BorderLayout.NORTH);
+		frame.add(player);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
@@ -94,6 +96,7 @@ public class Playerinator implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
+
 		dirc = vop.getText();
 		dirc.replace("\\", "/");
 		playlistAdd(dirc);
