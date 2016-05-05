@@ -39,6 +39,8 @@ public class Playerinator implements ActionListener {
 
 	}
 
+	
+	// finds all files within the specified directory
 	private static ArrayList<File> listf(String grak, ArrayList<File> files) {
 		File floobl = new File(grak);
 
@@ -53,6 +55,7 @@ public class Playerinator implements ActionListener {
 		return files;
 	}
 
+	//adds all mp3 files to the playlist of the Jaco mp3 player
 	private static void playlistAdd(String dirc) {
 		if (!dirc.isEmpty()) {
 			pil = listf(dirc, pill);
@@ -65,7 +68,7 @@ public class Playerinator implements ActionListener {
 		}
 
 	}
-
+	//creates the initial GUI where you specify the directory to collect files from
 	private static void inputGUI() {
 		player.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
 
@@ -82,7 +85,7 @@ public class Playerinator implements ActionListener {
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
-
+	//removes all items from the initial GUI and adds the Jaco player controls
 	protected static void playerGUI() {
 		frame.remove(as);
 		frame.remove(vop);
@@ -94,6 +97,8 @@ public class Playerinator implements ActionListener {
 		frame.setVisible(true);
 	}
 
+	
+	//when button der is clicked this method collects the directory and makes sure it is compatible with java's String system, runs the playlistAdd method, and runs the playerGUI method
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 
@@ -103,7 +108,7 @@ public class Playerinator implements ActionListener {
 		playerGUI();
 
 	}
-
+	//creates a directory choosing box to choose your directory to find files from
 	private static File findDir() {
 		JFileChooser choose = new JFileChooser();
 		choose.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
